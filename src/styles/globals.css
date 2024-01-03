@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/globals.css */
+
+:root {
+    --primary-color: #1d1d1d; /* Set your primary color here */
+    --secondary-color: #e44bca; /* Set your secondary color here */
+    --tertiary-color: white;
+}
+
+body {
+    background-color: var(--primary-color); /* Example: set background color to primary color */
+    color: var(--tertiary-color); /* Example: set text color to secondary color */
+
+    /* backdrop color */
+
+    align-items: center;
+
+    background: linear-gradient(#4671ea, #ac34e7);
+    /* Candy Dream 
+    background: linear-gradient(#4671ea, #ac34e7);
+    /* Art Decp
+    background: linear-gradient(#161616, #ce9928); */
+    width: 100%;
+
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
+    display: flex;
+    align-items: center;
+    min-height: 100vh; /* Ensure the background extends to the full height of the viewport */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.custom-textarea {
+    color: #1e1e1e; /* Set the color to your desired value */
+    text-align: top;
+}
+
+/* feedback styles */
+
+.error {
+    @apply border-2
+        border-red-500
+        bg-red-300
+        text-red-800
+        py-1 px-2
+        rounded-sm
+        block
+        max-w-fit
+        my-4 mx-auto;
+}

@@ -1,0 +1,336 @@
+/* NavBar.module.css */
+
+.NavBar {
+    width: 90%;
+    margin: 2rem auto;
+
+    /* padding: 1rem 0; */
+}
+
+.activeTab {
+    color: #e44bca;
+}
+
+.NavBar_box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.NavBar_box_left {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.NavBar_box_left_menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.NavBar_box_left_menu_item {
+    font-size: 1.2rem;
+    color: #e44bca;
+}
+
+.NavBar_box_middle {
+    background-color: #1e1e1e;
+    width: 80%;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5 rem;
+    margin: 0 auto;
+}
+
+.NavBar_box_middle_search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.NavBar_box_middle input {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: #e44bca;
+}
+
+.NavBar_box_right {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.NavBar_box_right_box {
+    display: flex;
+    gap: 0.1rem;
+    align-items: center;
+    background-color: transparent;
+    padding: 0.5rem 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.NavBar_box_right_box p {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1;
+    color: white;
+    margin: 0;
+}
+
+/* wallet button */
+/* .NavBar_box_right button {
+    background-color: #1e1e1e;
+    border: none;
+    outline: none;
+    color: #e44bca;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} */
+
+.modal {
+    pointer-events: none;
+    position: fixed;
+    inset: 0px;
+    margin: 0px;
+    display: grid;
+    height: 100%;
+    max-height: none;
+    width: 100%;
+    max-width: none;
+    justify-items: center;
+    padding: 0px;
+    opacity: 0;
+
+    z-index: 999;
+    background-color: transparent;
+    color: inherit;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-property: transform, opacity, visibility;
+    overflow-y: hidden;
+}
+:where(.modal) {
+    align-items: center;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal,
+.modal[open] {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal,
+.modal[open] {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+.modal-open,
+.modal:target,
+.modal-toggle:checked + .modal,
+.modal[open] {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+}
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+    overflow: hidden;
+}
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+    overflow: hidden;
+}
+:root:has(:is(.modal-open, .modal:target, .modal-toggle:checked + .modal, .modal[open])) {
+    overflow: hidden;
+}
+.modal:not(dialog:not(.modal-open)),
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: modal-pop 0.2s ease-out;
+}
+.modal:not(dialog:not(.modal-open)),
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    animation: modal-pop 0.2s ease-out;
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+
+.modal_box {
+    max-height: calc(100vh - 5em);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: 91.666667%;
+    max-width: 32rem /* 512px */;
+    --tw-scale-x: 0.9;
+    --tw-scale-y: 0.9;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+    border-bottom-right-radius: var(--rounded-box, 1rem /* 16px */);
+    border-bottom-left-radius: var(--rounded-box, 1rem /* 16px */);
+    border-top-left-radius: var(--rounded-box, 1rem /* 16px */);
+    border-top-right-radius: var(--rounded-box, 1rem /* 16px */);
+    --tw-bg-opacity: 1;
+    background-color: transparent;
+    padding: 1.5rem /* 24px */;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke,
+        opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    transition-duration: 200ms;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-open .modal_box,
+.modal-toggle:checked + .modal .modal_box,
+.modal:target .modal_box,
+.modal[open] .modal_box {
+    --tw-translate-y: 0px;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+}
+.modal-top :where(.modal_box) {
+    width: 100%;
+    max-width: none;
+    --tw-translate-y: -2.5rem /* -40px */;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+    border-bottom-right-radius: var(--rounded-box, 1rem /* 16px */);
+    border-bottom-left-radius: var(--rounded-box, 1rem /* 16px */);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.modal-middle :where(.modal_box) {
+    width: 91.666667%;
+    max-width: 32rem /* 512px */;
+    --tw-translate-y: 0px;
+    --tw-scale-x: 0.9;
+    --tw-scale-y: 0.9;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+    border-top-left-radius: var(--rounded-box, 1rem /* 16px */);
+    border-top-right-radius: var(--rounded-box, 1rem /* 16px */);
+    border-bottom-right-radius: var(--rounded-box, 1rem /* 16px */);
+    border-bottom-left-radius: var(--rounded-box, 1rem /* 16px */);
+}
+.modal-bottom :where(.modal_box) {
+    width: 100%;
+    max-width: none;
+    --tw-translate-y: 2.5rem /* 40px */;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate))
+        skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        scaleY(var(--tw-scale-y));
+    border-top-left-radius: var(--rounded-box, 1rem /* 16px */);
+    border-top-right-radius: var(--rounded-box, 1rem /* 16px */);
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+@media only screen and (max-wdith: 35em) {
+    .NavBar {
+        width: 90%;
+    }
+    .NavBar_box {
+        grid-template-columns: 5fr 1fr;
+    }
+    .NavBar_box_middle {
+        display: none;
+    }
+    .NavBar_box_left_menu {
+        display: none;
+    }
+    .NavBar_box_right_box {
+        display: none;
+    }
+}

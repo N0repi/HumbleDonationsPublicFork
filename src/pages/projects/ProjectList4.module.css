@@ -1,0 +1,138 @@
+/* ProjectList4.module.css */
+
+.gridLayout {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    width: 95%;
+    height: 100%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    overflow-y: auto !important; /* Add !important to ensure styles are not overridden */
+    scrollbar-width: thin;
+    scrollbar-color: #e44bca #fff;
+    max-height: 75vh;
+    padding: 0.5rem;
+    box-shadow: 20px 20px 20px rgba(0.1, 0.1, 0.1, 0.1); /* Adjust the values based on your preference */
+}
+
+.gridLayout::-webkit-scrollbar {
+    width: 8px;
+    margin-right: 5px;
+}
+
+.gridLayout::-webkit-scrollbar-thumb {
+    background-color: #e44bca;
+    border-radius: 4px;
+}
+
+.gridLayout::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.projectBox {
+    position: relative;
+    padding: 1rem; /* p-4 */
+    /* border: 1px solid #ccc; */
+    /* border border-gray-300 */
+    border-radius: 0.25rem; /* rounded */
+    padding-bottom: 2.5rem;
+    height: 250px;
+    /* white-space: wrap; */
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, 0.1); /* Adjust the values based on your preference */
+    margin-bottom: 1rem;
+}
+
+.tagContainer {
+    display: flex;
+
+    margin-top: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* tag styles */
+.tag {
+    padding: 0.25rem 0.5rem;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    border-radius: 0.25rem; /* rounded */
+
+    /* opacity: 60%;
+    transition: opacity 0.8s ease; */
+    border-top-left-radius: 0.375rem;
+    transition: transform 0.5s ease;
+}
+
+.tag:hover {
+    transform: translateX(-10px); /* Move all tags except the first one to the right on hover */
+}
+
+/* .tag:last-child {
+    transform: translateX(0px); /* Exclude the last tag from the transformation */
+
+.tag:first-child:hover + .tag {
+    transform: translateX(
+        -150px
+    ); /* Move the second tag to the right of the first tag when hovering over the first tag */
+}
+
+.tag:first-child:hover + .tag + .tag {
+    transform: translateX(
+        -150px
+    ); /* Move the third tag to the right of the second tag when hovering over the first tag */
+}
+
+.tag:first-child:hover {
+    transform: translateX(
+        0
+    ) !important; /* Exclude the first tag from the transformation on hover */
+}
+
+/* Apply styles to the first and second children when hovering over the third child */
+.tag:first-child:hover + .tag + .tag + .tag {
+    transform: translateX(
+        -300px
+    ); /* Move the fourth tag to the right of the third tag when hovering over the first tag */
+}
+
+.tagPlaceholder {
+    flex-grow: 15rem;
+    height: 0.25rem; /* Adjust the height of the placeholder as needed */
+    background-color: transparent; /* or set a color that matches your background */
+}
+
+/* Tag Colors */
+.Artistic {
+    background-color: #3beaf6;
+    color: #f3f4f6;
+}
+
+.Content-Creator {
+    background-color: #3b82f6;
+    color: #f3f4f6;
+}
+
+.DeFi {
+    background-color: #ef4444;
+    color: #f3f4f6;
+}
+
+.Educational {
+    background-color: #10b981;
+    color: #f3f4f6;
+}
+
+.Non-Profit {
+    background-color: #f59e0b;
+    color: #f3f4f6;
+}

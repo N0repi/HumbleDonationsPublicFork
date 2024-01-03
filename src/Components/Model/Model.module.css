@@ -1,0 +1,90 @@
+/* Model.module.css */
+
+.Model {
+    position: absolute;
+    inset: 0% 0% 0% 0%;
+    background-color: #1e1e1e5a;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1111111111;
+    backdrop-filter: blur(2px);
+}
+
+.Model_box {
+    position: relative;
+    background-color: #1e1e1e;
+    opacity: 92%;
+    padding: 2rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 0px 36px 10px rgba(228, 75, 203, 0.86);
+    -moz-box-shadow: 0px 0px 36px 10px rgba(228, 75, 203, 0.86);
+    box-shadow: 0px 0px 36px 10px rgba(228, 75, 203, 0.86);
+}
+
+/* fade attempt */
+
+.Model_box_heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Model_box_heading p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.Model_box_heading_img {
+    opacity: 80%;
+}
+
+/* pink wallet buttons */
+.Model_box_wallet p {
+    margin-bottom: 0.5rem;
+    background-color: #e44bca;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: #1e1e1e;
+    font-weight: 700;
+    cursor: pointer;
+    width: 10rem;
+}
+
+.Model_box_wallet p:last-child {
+    margin-bottom: 1.5rem;
+}
+
+/* wallet images */
+.Model_box_item {
+    display: flex;
+    align-items: center;
+    /* Added from p tag style */
+    margin-bottom: 0.5rem;
+    background-color: #1e1e1e;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    /* border: 2px solid #e44bca; */
+    color: #1e1e1e;
+    font-weight: 700;
+    cursor: pointer;
+
+    /* Added from p tag style */
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.Model_box_item:hover {
+    background-color: #e44bca;
+}
+
+.Model_box_para {
+    padding: 1rem;
+    line-height: 1.2;
+    border: 1px solid #e44bca;
+    border-radius: 0.5rem;
+}
+
+/* 39:26 */

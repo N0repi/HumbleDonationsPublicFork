@@ -1,0 +1,102 @@
+/* HeroSection.module.css */
+
+.HeroSection {
+    width: 90%;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Change to absolute */
+    margin-left: 0%;
+    margin-bottom: 10;
+}
+
+/* entire component -> black box behind buttons  */
+.HeroSection_box {
+    margin-top: -1rem; /* height of prop */
+    background-color: #1e1e1e;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    width: 30rem;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1); /* Adjust the values based on your preference */
+}
+
+.HeroSection_box_heading {
+    margin-top: -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* input amount of token & pink border around input section */
+.HeroSection_box_input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #e44bca9a;
+    padding-left: 2rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+}
+
+/* textbox for user to enter token */
+.HeroSection_box_input input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #e44bca;
+    font-size: 1.2rem;
+}
+
+/* right-hand button that displays the chosen token, default ETH */
+.HeroSection_box_input button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.1rem;
+    line-height: 0;
+    width: 9rem;
+    background-color: #e44bca;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+/* token balance */
+.HeroSection_box_balance {
+    margin-top: 0.2rem;
+    margin-left: 2rem;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: #e44bca;
+    font-size: 1rem;
+}
+
+/* Donate button */
+.HeroSection_box_btn {
+    display: flex;
+
+    justify-content: center;
+    background-color: #e44bca;
+    border: 0;
+    outline: 0;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 35em) {
+    .HeroSection {
+        width: 95%;
+    }
+    .HeroSection_box {
+        width: 95%;
+    }
+    .HeroSection_box_input input {
+        width: 50%;
+    }
+}

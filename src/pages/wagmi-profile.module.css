@@ -1,0 +1,29 @@
+/* wagmi-profile.module.css */
+
+/* Keep the styling for the connect button as it is */
+.connectButton {
+    text-align: center;
+    width: 7rem;
+    background-color: #e44bca;
+    border-radius: 0.5rem;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    transition: transform 1.2s ease;
+}
+
+.connectButton:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    color: white;
+}
+
+.createButton {
+    background-color: #eb5254;
+    padding: 10px;
+    padding-right: 8px;
+    padding-left: 8px;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
